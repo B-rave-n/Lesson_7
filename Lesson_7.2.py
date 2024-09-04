@@ -1,13 +1,8 @@
 def correct_sentence(text):
-    if text[0].islower() and text[-1] != '.':
-        return f"{text.capitalize()}."
-    elif text[0].islower():
-        return f"{text.capitalize()}"
-    elif text[-1] != '.':
-        return f"{text}."
+    if text[-1] != '.':
+        return f"{text[0].title()}{text[1:]}."
     else:
-        return f"{text}"
-
+        return f"{text[0].title()}{text[1:]}"
 
 assert correct_sentence("greetings, friends") == "Greetings, friends.", 'Test1'
 assert correct_sentence("hello") == "Hello.", 'Test2'
