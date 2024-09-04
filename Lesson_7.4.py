@@ -9,6 +9,5 @@ def common_elements():
              list_5.append(i)
     return set(list_3).intersection(set(list_5))
 
-
 assert common_elements() == {0, 75, 45, 15, 90, 60, 30}
 print('OK')
